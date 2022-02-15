@@ -1,0 +1,3 @@
+<?php //App%255CEntity%255CServiceGuide%2523getNbHeure
+
+return [PHP_INT_MAX, []];

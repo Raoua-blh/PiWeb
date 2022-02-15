@@ -1,0 +1,21 @@
+
+<table>
+    <tr>
+        <th> Nom Coach </th>
+        <th> Level </th>
+
+
+    </tr>
+    {% for c in listcoach %}
+        <tr>
+            <td> {{ c.NomCoach }} 
+            <a href="{{ path('Supprimercoach',{'id':c.id}) }}">Supprimer</a>
+            <a href="{{ path('ModifierCoach',{'id':c.id}) }}">Update</a>
+             </td>
+            <td> {{ c.Level }} </td>
+
+
+
+    {% endfor%}
+
+</table>

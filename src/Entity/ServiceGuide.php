@@ -18,11 +18,6 @@ class ServiceGuide
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $nom_coach;
-
-    /**
      * @ORM\Column(type="integer")
      */
     private $nb_heure;
@@ -40,18 +35,6 @@ class ServiceGuide
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getNomCoach(): ?string
-    {
-        return $this->nom_coach;
-    }
-
-    public function setNomCoach(string $nom_coach): self
-    {
-        $this->nom_coach = $nom_coach;
-
-        return $this;
     }
 
     public function getNbHeure(): ?int

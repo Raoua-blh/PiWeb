@@ -60,15 +60,8 @@ class Joueur
      */
     private $points;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Tournois::class, mappedBy="id_joueur", orphanRemoval=true)
-     */
-    private $relation;
-
-    public function __construct()
-    {
-        $this->relation = new ArrayCollection();
-    }
+    
+    
 
     public function getId(): ?int
     {
@@ -171,33 +164,5 @@ class Joueur
         return $this;
     }
 
-    /**
-     * @return Collection|Tournois[]
-     */
-    public function getRelation(): Collection
-    {
-        return $this->relation;
-    }
-
-    public function addRelation(Tournois $relation): self
-    {
-        if (!$this->relation->contains($relation)) {
-            $this->relation[] = $relation;
-            $relation->setIdJoueur($this);
-        }
-
-        return $this;
-    }
-
-    public function removeRelation(Tournois $relation): self
-    {
-        if ($this->relation->removeElement($relation)) {
-            // set the owning side to null (unless already changed)
-            if ($relation->getIdJoueur() === $this) {
-                $relation->setIdJoueur(null);
-            }
-        }
-
-        return $this;
-    }
+   
 }

@@ -37,11 +37,6 @@ class Tournois
      */
     private $dateFin;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Joueur::class, inversedBy="organiser")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $id_joueur;
 
     public function getIdTournois(): ?int
     {

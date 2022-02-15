@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'f1ec5b7cd16fca90e520adbdf9eb4461abf9df9c',
         'name' => 'symfony/website-skeleton',
         'dev' => true,
     ),
@@ -1239,12 +1239,12 @@
             'dev_requirement' => false,
         ),
         'symfony/website-skeleton' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'f1ec5b7cd16fca90e520adbdf9eb4461abf9df9c',
             'dev_requirement' => false,
         ),
         'symfony/yaml' => array(

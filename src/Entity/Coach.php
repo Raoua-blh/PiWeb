@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\CoachRepository;
 use Doctrine\ORM\Mapping as ORM;
-use App\Entity\Joueur;
 
 /**
  * @ORM\Entity(repositoryClass=CoachRepository::class)
@@ -21,33 +20,16 @@ class Coach
     /**
      * @ORM\Column(type="integer")
      */
-    private $badge;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
     private $level;
 
     /**
-     * @ORM\Column(type="blob")
+     * @ORM\Column(type="string", length=255)
      */
-    private $CV;
+    private $nomCoach;
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getBadge(): ?string
-    {
-        return $this->badge;
-    }
-
-    public function setBadge(string $badge): self
-    {
-        $this->badge = $badge;
-
-        return $this;
     }
 
     public function getLevel(): ?int
@@ -62,14 +44,14 @@ class Coach
         return $this;
     }
 
-    public function getCV()
+    public function getNomCoach(): ?string
     {
-        return $this->CV;
+        return $this->nomCoach;
     }
 
-    public function setCV($CV): self
+    public function setNomCoach(string $nomCoach): self
     {
-        $this->CV = $CV;
+        $this->nomCoach = $nomCoach;
 
         return $this;
     }
